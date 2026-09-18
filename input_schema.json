@@ -1,7 +1,13 @@
 {
-    "actorSpecification": 1,
-    "name": "linkedin-public-jobs-scraper",
-    "title": "LinkedIn Public Jobs Scraper",
-    "version": "1.0.0",
-    "dockerfile": "./Dockerfile"
+  "title": "LinkedIn Public Jobs Scraper Input",
+  "description": "Input for the LinkedIn jobs scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "query": {
+      "title": "Search query",
+      "type": "string",
+      "description": "Keyword to search for jobs"
+    }
+  }
 }
