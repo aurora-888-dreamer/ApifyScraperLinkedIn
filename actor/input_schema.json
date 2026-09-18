@@ -1,7 +1,39 @@
 {
-    "actorSpecification": 1,
-    "name": "linkedin-public-jobs-scraper",
-    "title": "LinkedIn Public Jobs Scraper",
-    "version": "1.0.0",
-    "dockerfile": "./Dockerfile"
+    "lexiconVersion": 1,
+    "title": "Multi-Portal Loker Scraper Indonesia",
+    "type": "object",
+    "properties": {
+        "target_portal": {
+            "title": "Pilih Target Portal Loker",
+            "type": "string",
+            "description": "Situs loker yang ingin Anda ambil datanya.",
+            "default": "linkedin",
+            "editor": "select",
+            "enum": ["linkedin", "loker_id"],
+            "enumTitles": ["LinkedIn Jobs (Publik)", "Loker.id (Lokal Indonesia)"]
+        },
+        "query": {
+            "title": "Kata Kunci Pencarian",
+            "type": "string",
+            "description": "Contoh: Python Developer, Admin Gudang, Data Analyst",
+            "default": "Python Developer",
+            "editor": "textfield"
+        },
+        "location": {
+            "title": "Lokasi (Khusus LinkedIn)",
+            "type": "string",
+            "description": "Contoh: Indonesia, Jakarta, Bandung",
+            "default": "Indonesia",
+            "editor": "textfield"
+        },
+        "max_pages": {
+            "title": "Maksimal Halaman",
+            "type": "integer",
+            "description": "Jumlah halaman yang ingin di-scrap",
+            "default": 2,
+            "minimum": 1,
+            "editor": "number"
+        }
+    },
+    "required": ["target_portal", "query"]
 }
