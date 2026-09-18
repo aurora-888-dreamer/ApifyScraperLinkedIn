@@ -1,0 +1,7 @@
+{
+    "actorSpecification": 1,
+    "name": "linkedin-public-jobs-scraper",
+    "title": "LinkedIn Public Jobs Scraper",
+    "version": "1.0.0",
+    "dockerfile": "./Dockerfile"
+}
